@@ -16,12 +16,15 @@ const poly = (bound, total = 3) => {
 const control = document.getElementById('segments')
 const imgParent = document.querySelector('.revealer')
 const src = `https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&q=70&width=${imgParent.clientWidth * window.devicePixelRatio}`
+const alt = 'Photo by Shifaaz shamoon, https://unsplash.com/@sotti'
 
 const setUpImg = container => {
   const segments = parseInt(control.value, 10)
   container.classList.remove('ready')
   container.innerHTML = ''
   const img = document.createElement('img')
+  img.alt = alt
+  img.title = alt
   container.appendChild(img)
   container.style.WebkitClipPath = `polygon(${poly('start', segments)})`
 
