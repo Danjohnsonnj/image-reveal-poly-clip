@@ -38,3 +38,10 @@
 .revealer img.loaded {
   transform: translatex(0);
 }
+#segments {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  font-size: 16px;
+}
