@@ -1,9 +1,10 @@
 {
-  "name": "boilerplate",
+  "name": "image-reveal-poly-clip",
   "version": "0.0.1",
-  "description": "Boilerplate with Webpack and Babel",
+  "description": "Reveal an image via programmatic polygom clip path",
   "author": "Daniel Johnson",
   "license": "none",
+  "homepage": "https://github.com/Danjohnsonnj/image-reveal-poly-clip",
   "scripts": {
     "copy": "cpx 'src/*.html' './dist'",
     "copy:watch": "cpx 'src/*.html' './dist' --watch",
