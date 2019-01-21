@@ -1,5 +1,6 @@
-@height: unit(100, vmin);
-@ratio: calc(3/4);
+@height: calc(@ratio * 100vw);
+@ratio: calc(4/3);
+@transitionDuration: unit(1.5, s);
 
 * {
   margin: 0;
@@ -14,7 +15,7 @@
 }
 
 .revealer {
-  width: calc(@ratio * @height);
+  width: 100vw;
   height: @height;
   transition: none;
   overflow: hidden;
@@ -31,7 +32,7 @@
   }
 
   &.ready {
-    transition: -webkit-clip-path 2s linear;
+    transition: -webkit-clip-path @transitionDuration linear;
   }
 
   img {
@@ -39,11 +40,11 @@
     height: 100%;
     object-fit: cover;
     object-position: 50%;
-    transition: all 2s linear;
-    transform: translateX(-25%);
+    transition: all @transitionDuration linear;
+    transform: translateX(0) scale(1.2);
     
     &.loaded {
-      transform: translatex(0);
+      transform: translateX(0) scale(1);
     }
   }
 }
