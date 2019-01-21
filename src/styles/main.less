@@ -1,6 +1,6 @@
-@height: calc(@ratio * 100vw);
-@ratio: calc(4/3);
-@transitionDuration: unit(1.5, s);
+@height: unit(100, vmin);
+@ratio: calc(3/4);
+@transitionDuration: unit(1, s);
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@
 }
 
 .revealer {
-  width: 100vw;
+  width: calc(@ratio * @height);
   height: @height;
   transition: none;
   overflow: hidden;
@@ -41,10 +41,10 @@
     object-fit: cover;
     object-position: 50%;
     transition: all @transitionDuration linear;
-    transform: translateX(0) scale(1.2);
+    transform: scale(1.2);
     
     &.loaded {
-      transform: translateX(0) scale(1);
+      transform: scale(1);
     }
   }
 }
